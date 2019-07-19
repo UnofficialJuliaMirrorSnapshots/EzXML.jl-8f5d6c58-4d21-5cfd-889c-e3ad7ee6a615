@@ -237,8 +237,8 @@ end
 """
 A proxy type to libxml2's node struct.
 
-Properties (Julia ≥ 0.7)
-------------------------
+Properties
+----------
 
 | Name | Type | Description |
 |:---- |:---- |:------------|
@@ -297,11 +297,11 @@ end
 
 function Base.show(io::IO, node::Node)
     prefix = isdefined(Main, :Node) ? "Node" : "EzXML.Node"
-    type = nodetype(node)
-    if type ∈ (ELEMENT_NODE, ATTRIBUTE_NODE) && hasnodename(node)
-        desc = string(repr(type), '[', nodename(node), ']')
+    ntype = nodetype(node)
+    if ntype ∈ (ELEMENT_NODE, ATTRIBUTE_NODE) && hasnodename(node)
+        desc = string(repr(ntype), '[', nodename(node), ']')
     else
-        desc = repr(type)
+        desc = repr(ntype)
     end
     @printf(io, "%s(<%s@%p>)", prefix, desc, node.ptr)
 end
