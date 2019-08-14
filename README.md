@@ -31,10 +31,11 @@ Install EzXML.jl as follows:
 julia -e 'using Pkg; Pkg.add("EzXML")'
 ```
 
-This package depends on [libxml2](http://xmlsoft.org/), which will be installed
-automatically from <https://github.com/bicycle1885/XML2Builder> via
-[BinaryProvider.jl](https://github.com/JuliaPackaging/BinaryProvider.jl).
-Windows, Linux, and macOS are now supported.
+This package depends on [libxml2](http://xmlsoft.org/) 2.9.9, which will be
+installed automatically from
+[Yggdrasil](https://github.com/JuliaPackaging/Yggdrasil/releases/tag/XML2-v2.9.9%2B0)
+via [BinaryProvider.jl](https://github.com/JuliaPackaging/BinaryProvider.jl).
+Windows, Linux, macOS, and FreeBSD are now supported.
 
 Usage
 -----
@@ -82,7 +83,7 @@ end
 Quick reference
 ---------------
 
-See the [reference page](https://bicycle1885.github.io/EzXML.jl/stable/reference.html) or docstrings for more details.
+See the [reference page](https://bicycle1885.github.io/EzXML.jl/stable/reference/) or docstrings for more details.
 
 Types:
 * `EzXML.Document`: an XML/HTML document
